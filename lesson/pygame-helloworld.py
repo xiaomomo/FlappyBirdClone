@@ -17,6 +17,7 @@ while True:
             sys.exit()
 
     ball_rect = ball_rect.move(speed)
+    print(ball_rect.left, ball_rect.right, ball_rect.top, ball_rect.bottom)
 
     if ball_rect.left < 0 or ball_rect.right > width:
         speed[0] = -speed[0]
@@ -25,6 +26,6 @@ while True:
         speed[1] = -speed[1]
 
     screen.fill([0, 0, 0])
-    print(ball_rect)
+
     screen.blit(ball, ball_rect)
     pygame.display.flip()
