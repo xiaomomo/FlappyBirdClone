@@ -1,25 +1,30 @@
 import sys, pygame
+
 pygame.init()
 
-size = width, height = 320, 240
+width = 320
+height = 240
 speed = [2, 2]
-black = 0, 0, 0
 
-screen = pygame.display.set_mode(size)
+screen = pygame.display.set_mode([width, height])
 
-ball = pygame.image.load("../assets/sprites/intro_ball.gif")
-ballrect = ball.get_rect()
+ball = pygame.image.load("../assets/sprites/ball.gif")
+ball_rect = ball.get_rect()
 
-while 1:
+while True:
     for event in pygame.event.get():
-        if event.type == pygame.QUIT: sys.exit()
+        if event.type == pygame.QUIT:
+            sys.exit()
 
-    ballrect = ballrect.move(speed)
-    if ballrect.left < 0 or ballrect.right > width:
+    ball_rect = ball_rect.move(speed)
+
+    if ball_rect.left < 0 or ball_rect.right > width:
         speed[0] = -speed[0]
-    if ballrect.top < 0 or ballrect.bottom > height:
+
+    if ball_rect.top < 0 or ball_rect.bottom > height:
         speed[1] = -speed[1]
 
-    screen.fill(black)
-    screen.blit(ball, ballrect)
+    screen.fill([0, 0, 0])
+    print(ball_rect)
+    screen.blit(ball, ball_rect)
     pygame.display.flip()
