@@ -26,6 +26,5 @@ while True:
         speed[1] = -speed[1]
 
     screen.fill([0, 0, 0])
-
     screen.blit(ball, ball_rect)
     pygame.display.flip()
