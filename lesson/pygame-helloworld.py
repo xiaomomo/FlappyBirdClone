@@ -8,7 +8,7 @@ speed = [2, 2]
 
 screen = pygame.display.set_mode([width, height])
 
-ball = pygame.image.load("../assets/sprites/ball.gif")
+ball = pygame.image.load("../assets/sprites/ball.png")
 ball_rect = ball.get_rect()
 
 while True:

@@ -26,7 +26,6 @@ while True:
             pygame.quit()
             sys.exit()
         if event.type == KEYDOWN and event.key == K_SPACE:
-            print('tiaotiao')
             playerY = playerY - 20
 
     pygame.display.update()
