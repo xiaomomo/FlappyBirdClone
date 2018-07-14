@@ -21,6 +21,8 @@ playerList = [pygame.image.load(playerImageList[0]).convert_alpha(),
               pygame.image.load(playerImageList[1]).convert_alpha(),
               pygame.image.load(playerImageList[2]).convert_alpha()]
 
+wing_sounds = pygame.mixer.Sound('../assets/audio/wing.ogg')
+
 playerX = int(screenWidth * 0.2)
 playerY = int((screenHeight - playerList[0].get_height()) / 2)
 
@@ -32,7 +34,6 @@ while True:
     # if (loopTime + 1) % 5 == 0:
     #     playerIndex = (playerIndex + 1) % 3
     playerIndex = (playerIndex + 1) % 3
-
     screen.blit(playerList[playerIndex], (playerX, playerY))
 
     for event in pygame.event.get():
@@ -41,6 +42,7 @@ while True:
             sys.exit()
         if event.type == KEYDOWN and event.key == K_SPACE:
             playerY = playerY - 20
+            wing_sounds.play()
 
     pygame.display.update()
     fpsClock.tick(60)
