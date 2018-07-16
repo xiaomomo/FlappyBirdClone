@@ -26,13 +26,10 @@ wing_sounds = pygame.mixer.Sound('../assets/audio/wing.ogg')
 playerX = int(screenWidth * 0.2)
 playerY = int((screenHeight - playerList[0].get_height()) / 2)
 
-loopTime = 0
 playerIndex = 0
 while True:
     screen.blit(background, (0, 0))
 
-    # if (loopTime + 1) % 5 == 0:
-    #     playerIndex = (playerIndex + 1) % 3
     playerIndex = (playerIndex + 1) % 3
     screen.blit(playerList[playerIndex], (playerX, playerY))
 
@@ -46,5 +43,3 @@ while True:
 
     pygame.display.update()
     fpsClock.tick(60)
-    # loopTime = loopTime + 1
-    loopTime = (loopTime + 1) % 30
