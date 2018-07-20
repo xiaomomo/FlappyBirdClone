@@ -11,29 +11,20 @@ pygame.display.set_caption('Flappy Bird')
 
 fpsClock = pygame.time.Clock()
 screen = pygame.display.set_mode((screenWidth, screenHeight))
-
 backgroundImage = pygame.image.load('../assets/sprites/background-day.png').convert()
-
 playerListImage = [pygame.image.load('../assets/sprites/redbird-upflap.png').convert_alpha(),
                    pygame.image.load('../assets/sprites/redbird-midflap.png').convert_alpha(),
                    pygame.image.load('../assets/sprites/redbird-downflap.png').convert_alpha()]
-
 baseImage = pygame.image.load('../assets/sprites/base.png')
-
 pipeListImage = [pygame.transform.rotate(pygame.image.load('../assets/sprites/pipe-red.png').convert_alpha(), 180),
                  pygame.image.load('../assets/sprites/pipe-red.png').convert_alpha()]
-
 wing_sounds = pygame.mixer.Sound('../assets/audio/wing.ogg')
-
 die_sounds = pygame.mixer.Sound('../assets/audio/die.ogg')
-
 playerX = int(screenWidth * 0.2)
 playerY = int((screenHeight - playerListImage[0].get_height()) / 2)
-
 basex = 0
 basey = int(screenHeight * 0.78)
 baseShift = baseImage.get_width() - backgroundImage.get_width()
-
 playerIndex = 0
 playerVelY = -9  # player's velocity along Y, default same as playerFlapped
 playerMaxVelY = 10  # max vel along Y, max descend speed
@@ -51,15 +42,14 @@ def getRandomPipY():
     return random.randrange(-250, -100)
 
 
+def checkCrash(playerY):
+    return playerY > screenHeight-baseImage.get_height()
+
+
 for index in range(0, 20):
     x = initPipX + index * pipXDistance
     y = getRandomPipY()
     pipFirstPositionList.append([[x, y], [x, y + 450]])
-
-
-def checkCrash(playerY):
-    return playerY > screenHeight-baseImage.get_height()
-
 
 while True:
     for event in pygame.event.get():
@@ -89,7 +79,6 @@ while True:
                     sys.exit()
 
     screen.blit(backgroundImage, (0, 0))
-
     playerIndex = (playerIndex + 1) % 3
     screen.blit(playerListImage[playerIndex], (playerX, playerY))
 

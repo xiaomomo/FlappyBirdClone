@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="29de66e7-714a-439b-afee-d49ba93cbf25" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/lesson/lesson5.py" afterPath="$PROJECT_DIR$/lesson/lesson5.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -45,8 +46,8 @@
       <file leaf-file-name="lesson5.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lesson/lesson5.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="67" column="22" lean-forward="true" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
+            <state relative-caret-position="194">
+              <caret line="16" column="67" lean-forward="false" selection-start-line="16" selection-start-column="67" selection-end-line="16" selection-end-column="67" />
               <folding />
             </state>
           </provider>
@@ -382,7 +383,14 @@
       <option name="project" value="LOCAL" />
       <updated>1531703796840</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="lesson 5">
+      <created>1532086432403</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1532086432403</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
@@ -464,7 +472,8 @@
     <MESSAGE value="hello world" />
     <MESSAGE value="第二课" />
     <MESSAGE value="lesson 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson 2" />
+    <MESSAGE value="lesson 5" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson 5" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -812,8 +821,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lesson/lesson5.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="67" column="22" lean-forward="true" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
+        <state relative-caret-position="194">
+          <caret line="16" column="67" lean-forward="false" selection-start-line="16" selection-start-column="67" selection-end-line="16" selection-end-column="67" />
           <folding />
         </state>
       </provider>
